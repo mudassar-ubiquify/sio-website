@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import WatermarkedImage from "@/components/WatermarkedImage";
 
 export default function WaterTruckPage() {
   const { push } = useRouter();
@@ -96,22 +97,22 @@ export default function WaterTruckPage() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="rounded-lg overflow-hidden border border-[#E5E5E5] bg-white shadow-sm">
-              <img 
-                src="/waterTruck1.jpg" 
+              <WatermarkedImage
+                src="/waterTruck1.jpg"
                 alt="Oshkosh 6x6 Water Truck"
                 className="w-full h-[300px] object-cover"
               />
             </div>
             <div className="rounded-lg overflow-hidden border border-[#E5E5E5] bg-white shadow-sm">
-              <img 
-                src="/waterTruck2.jpg" 
+              <WatermarkedImage
+                src="/waterTruck2.jpg"
                 alt="Oshkosh 6x6 Water Truck"
                 className="w-full h-[300px] object-cover"
               />
             </div>
             <div className="rounded-lg overflow-hidden border border-[#E5E5E5] bg-white shadow-sm">
-              <img 
-                src="/waterTruck3.jpg" 
+              <WatermarkedImage
+                src="/waterTruck3.jpg"
                 alt="Oshkosh 6x6 Water Truck"
                 className="w-full h-[300px] object-cover"
               />
@@ -129,7 +130,7 @@ export default function WaterTruckPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
             {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => (
               <div key={num} className="rounded-lg overflow-hidden border border-[#E5E5E5] bg-white shadow-sm">
-                <img 
+                <WatermarkedImage
                   src={`/waterTruckGroup2-${num}.jpg`}
                   alt={`Oshkosh 6x6 Water Truck - Image ${num}`}
                   className="w-full h-[250px] object-cover"
@@ -149,7 +150,7 @@ export default function WaterTruckPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {Array.from({ length: 2 }, (_, i) => i + 1).map((num) => (
               <div key={num} className="rounded-lg overflow-hidden border border-[#E5E5E5] bg-white shadow-sm">
-                <img 
+                <WatermarkedImage
                   src={`/waterTruckGroup3-${num}.jpg`}
                   alt={`Oshkosh 6x6 Water Truck - Group 3 Image ${num}`}
                   className="w-full h-[300px] lg:h-[350px] object-cover"
