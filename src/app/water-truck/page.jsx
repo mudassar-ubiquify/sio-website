@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import WatermarkedImage from "@/components/WatermarkedImage";
+import ApplicationTag from "@/components/ApplicationTag";
 
 export default function WaterTruckPage() {
   const { push } = useRouter();
@@ -213,16 +214,14 @@ export default function WaterTruckPage() {
               <p className="font-semibold text-lg">Applications</p>
               <div className="mt-3 grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm lg:text-base">
                 {[
-                  "Dust Suppression",
-                  "Civil Construction",
-                  "Mining & Quarrying",
-                  "Pipeline",
-                  "Wildfire Support",
-                  "Disaster Relief",
-                ].map((item) => (
-                  <div key={item} className="bg-[#F6F6F6] border border-[#EAEAEA] rounded-md px-3 py-2">
-                    {item}
-                  </div>
+                  { label: "Dust Suppression", iconSrc: "/dustSuppression.png" },
+                  { label: "Civil Construction", iconSrc: "/civilConstruction.png" },
+                  { label: "Mining & Quarrying", iconSrc: "/miningQuarrying.png" },
+                  { label: "Pipeline", iconSrc: "/pipline.png" },
+                  { label: "Wildfire Support", iconSrc: "/wildfireSupport.png" },
+                  { label: "Disaster Relief", iconSrc: "/disasterRelief.png" },
+                ].map(({ label, iconSrc }) => (
+                  <ApplicationTag key={label} label={label} iconSrc={iconSrc} />
                 ))}
               </div>
             </div>
