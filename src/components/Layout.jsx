@@ -20,7 +20,7 @@ export default ({ children }) => {
           <button
             onClick={() => push("/contact-us")}
             className={`py-[8px] px-[20px] text-sm lg:py-[14px] lg:px-[50px] ${
-              pathname !== "/" ? "bg-[#5C9544] text-white" : "bg-white"
+              pathname !== "/" ? "bg-[#5C9544] text-white" : "bg-white"  
             } rounded-full lg:text-xl capitalize`}
           >
             Request a quote
@@ -37,6 +37,10 @@ export default ({ children }) => {
             <img src="/footer-image.png" />
           </div>
           <div className="pr-28">
+            <div className="mb-6 flex gap-5 items-center">
+              <span onClick={() => push("/water-truck")} className="cursor-pointer capitalize hover:underline">Water truck</span>
+              <span onClick={() => push("/inventory")} className="cursor-pointer capitalize hover:underline">Inventory</span>
+            </div>
             <a href="https://maps.app.goo.gl/ahQMjFPMQakkjWot5?g_st=ac">
               <span className="font-semibold">Office Address:</span>
               <br />
@@ -64,6 +68,10 @@ export default ({ children }) => {
           <img className="cursor-pointer" onClick={() => push("/")} src="/logo-footer.png"></img>
         </div>
         <div className="mt-8">
+          <div className="flex gap-5 mb-6 items-center">
+            <span onClick={() => push("/water-truck")} className="cursor-pointer capitalize hover:underline">Water truck</span>
+            <span onClick={() => push("/inventory")} className="cursor-pointer capitalize hover:underline">Inventory</span>
+          </div>
           <a href="https://maps.app.goo.gl/ahQMjFPMQakkjWot5?g_st=ac">
             <span className="font-semibold">Office Address:</span>
             <br />
