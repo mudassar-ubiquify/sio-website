@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.roboto-slab {
+  font-family: 'Roboto Slab', serif;
+}
+
+.phone-error .form-control {
+  border-color: red !important;
+}
+
+.phone-error .flag-dropdown {
+  border-color: red !important;
+}
+
+.error-border {
+  border-color: #ff4d4f
+}
+
+.no-hover:hover {
+  background-color: #5C9544 !important;
+  box-shadow: none !important;
+  color: white !important;
+  opacity: 1 !important;
+}
