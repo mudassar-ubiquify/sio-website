@@ -25,7 +25,7 @@ export default function WatermarkedImage({ src, alt = "", className = "" }) {
         <img
           src="/logo.svg"
           alt="O'Shea watermark"
-          className="pointer-events-none select-none absolute bottom-2 right-2 h-6 opacity-60 drop-shadow-md transition-opacity group-hover:opacity-80"
+          className="pointer-events-none select-none absolute bottom-1/4 left-1/2 transform -translate-x-1/2 h-10 lg:h-12 opacity-70 drop-shadow-lg"
         />
       </div>
 
@@ -44,7 +44,7 @@ export default function WatermarkedImage({ src, alt = "", className = "" }) {
             <img
               src="/logo.svg"
               alt="O'Shea watermark"
-              className="pointer-events-none select-none absolute bottom-4 right-4 h-10 opacity-70 drop-shadow-md"
+              className="pointer-events-none select-none absolute bottom-1/4 left-1/2 transform -translate-x-1/2 h-16 opacity-80 drop-shadow-lg"
             />
             <button
               onClick={close}
