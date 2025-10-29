@@ -36,7 +36,10 @@ export default function WaterTruckPage() {
                 Request a quote
               </button>
               <button
-                onClick={() => window.scrollTo({ top: window.innerHeight, behavior: "smooth" })}
+                onClick={() => {
+                  const el = document.getElementById("specs-section");
+                  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+                }}
                 className="rounded-full bg-white text-black py-[10px] px-[28px] lg:py-[14px] lg:px-[50px]"
               >
                 Explore specs
@@ -46,46 +49,28 @@ export default function WaterTruckPage() {
         </div>
       </div>
 
-      {/* Intro */}
+      {/* Intro + Auto-Play Video Section */}
       <div className="px-[20px] lg:px-[100px] py-12 lg:py-20">
-        <div className="max-w-5xl">
-          <p className="roboto-slab font-bold text-[28px] lg:text-[42px]">Built for the toughest job‑sites</p>
-          <p className="mt-3 text-[#333] text-sm md:text-base lg:text-lg">
-            The Oshkosh MK23 6x6 Water Truck delivers high‑capacity water transport with exceptional reliability,
-            control and operator comfort. Whether it's dust suppression, soil compaction, fire mitigation, or remote
-            access support, this machine is ready to perform.
-          </p>
-        </div>
-      </div>
-
-      {/* Auto-Play Video Section */}
-      <div className="px-[20px] lg:px-[100px] pb-16">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
-            <div className="rounded-lg overflow-hidden border border-[#E5E5E5] bg-white shadow-sm">
-              <video
-                src="/waterTruckVideo1.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full h-[300px] lg:h-[350px] object-cover"
-              >
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div className="rounded-lg overflow-hidden border border-[#E5E5E5] bg-white shadow-sm">
-              <video
-                src="/waterTruckVideo2.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full h-[300px] lg:h-[350px] object-cover"
-              >
-                Your browser does not support the video tag.
-              </video>
-            </div>
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div>
+            <p className="roboto-slab font-bold text-[28px] lg:text-[42px]">Built for the toughest job‑sites</p>
+            <p className="mt-3 text-[#333] text-sm md:text-base lg:text-lg">
+              The Oshkosh MK23 6x6 Water Truck delivers high‑capacity water transport with exceptional reliability,
+              control and operator comfort. Whether it's dust suppression, soil compaction, fire mitigation, or remote
+              access support, this machine is ready to perform.
+            </p>
+          </div>
+          <div className="rounded-lg overflow-hidden border border-[#E5E5E5] bg-white shadow-sm">
+            <video
+              src="/waterTruckVideo2.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-[300px] lg:h-[350px] object-cover"
+            >
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       </div>
@@ -163,7 +148,7 @@ export default function WaterTruckPage() {
       </div>
 
       {/* Key Features & Specifications */}
-      <div className="px-[20px] lg:px-[100px] pb-16">
+      <div id="specs-section" className="px-[20px] lg:px-[100px] pb-16">
         <div className="bg-white border border-[#E5E5E5] rounded-xl p-6 lg:p-10">
           <p className="roboto-slab font-bold text-[22px] lg:text-[32px] text-[#5C9544]">
             Key Features & Specifications
