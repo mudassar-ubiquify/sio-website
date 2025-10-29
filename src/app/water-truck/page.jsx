@@ -12,7 +12,7 @@ export default function WaterTruckPage() {
       {/* Hero Banner */}
       <div className="relative w-full h-[60vh] lg:h-[80vh] overflow-hidden">
         <video
-          src="/waterTruckBanner.mp4"
+          src="/waterTruckBanner1.mp4"
           autoPlay
           muted
           loop
