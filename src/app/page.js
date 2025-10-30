@@ -51,7 +51,7 @@ export default function Home() {
         </div>
       </div>
       
-      <div className="hidden xl:flex h-screen item-center justify-center">
+      <div className="hidden xl:flex items-center justify-center py-20">
         <div className="flex items-center gap-20">
           <img src="/soi-img.png" className="w-[800px] h-[500px]" />
           <div>
@@ -104,7 +104,7 @@ export default function Home() {
         </div>
       </div>
       {/* Water Trucks promo section */}
-      <div className="px-[20px] lg:px-[100px] py-16">
+      <div className="px-[20px] lg:px-[100px] py-16 bg-[#F6F6F6]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div>
             <p className="roboto-slab font-bold text-[32px] lg:text-[42px]">Water Trucks</p>
