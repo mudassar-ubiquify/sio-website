@@ -2,9 +2,11 @@
 
 import { useState } from "react";
 import WatermarkedImage from "@/components/WatermarkedImage";
+import GalleryModal from "@/components/GalleryModal";
 
 export default function ImageCarousel({ images = [], alt = "", heightClass = "h-[220px]", roundedClass = "rounded-none" }) {
   const [index, setIndex] = useState(0);
+  const [open, setOpen] = useState(false);
   const hasImages = Array.isArray(images) && images.length > 0;
   const safeImages = hasImages ? images : ["/logo-footer.png"]; // fallback
 
@@ -19,7 +21,7 @@ export default function ImageCarousel({ images = [], alt = "", heightClass = "h-
           key={`${src}-${i}`}
           className={`absolute inset-0 transition-opacity duration-300 ${i === index ? "opacity-100" : "opacity-0"}`}
         >
-          <WatermarkedImage src={src} alt={alt} className={`w-full ${heightClass} object-cover`} />
+          <WatermarkedImage src={src} alt={alt} className={`w-full ${heightClass} object-cover`} onClick={() => { setIndex(i); setOpen(true); }} />
         </div>
       ))}
 
@@ -53,6 +55,7 @@ export default function ImageCarousel({ images = [], alt = "", heightClass = "h-
           </div>
         </>
       )}
+      <GalleryModal open={open} images={safeImages} startIndex={index} onClose={() => setOpen(false)} />
     </div>
   );
 }

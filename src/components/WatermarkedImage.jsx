@@ -2,7 +2,7 @@
 
 import { useState, useCallback, useEffect } from "react";
 
-export default function WatermarkedImage({ src, alt = "", className = "" }) {
+export default function WatermarkedImage({ src, alt = "", className = "", onClick }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const open = useCallback(() => setIsOpen(true), []);
@@ -16,6 +16,20 @@ export default function WatermarkedImage({ src, alt = "", className = "" }) {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [isOpen, close]);
+
+  // If onClick is provided, delegate click handling to parent (e.g., gallery/preview)
+  if (onClick) {
+    return (
+      <div className="relative group cursor-zoom-in" onClick={onClick}>
+        <img src={src} alt={alt} className={className} />
+        <img
+          src="/logo.svg"
+          alt="O'Shea watermark"
+          className="pointer-events-none select-none absolute bottom-1/4 left-1/2 transform -translate-x-1/2 h-10 lg:h-12 opacity-70 drop-shadow-lg"
+        />
+      </div>
+    );
+  }
 
   return (
     <>
