@@ -50,36 +50,7 @@ export default function Home() {
           <img className="animate-bounce" src="/arrow.svg" />
         </div>
       </div>
-      {/* Water Trucks promo section */}
-      <div className="px-[20px] lg:px-[100px] py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          <div>
-            <p className="roboto-slab font-bold text-[32px] lg:text-[42px]">Water Trucks</p>
-            <p className="mt-3 text-[#333] text-sm md:text-base lg:text-lg max-w-[600px]">
-              Heavy-duty off-road water trucks engineered for dust suppression, soil compaction, and site support.
-              Explore our Oshkosh 6x6 builds with cab‑controlled spray systems and high‑capacity tanks.
-            </p>
-            <div className="mt-6 flex gap-3">
-              <button
-                onClick={() => push("/water-truck")}
-                className="rounded-full text-white bg-[#5C9544] py-[10px] px-[28px] lg:py-[14px] lg:px-[50px]"
-              >
-                View Water Trucks
-              </button>
-            </div>
-          </div>
-          <div className="rounded-xl overflow-hidden border border-[#E5E5E5] bg-[#F6F6F6]">
-            <video
-              src="/waterTruckBanner1.mp4"
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="w-full h-[260px] lg:h-[360px] object-cover"
-            />
-          </div>
-        </div>
-      </div>
+      
       <div className="hidden xl:flex h-screen item-center justify-center">
         <div className="flex items-center gap-20">
           <img src="/soi-img.png" className="w-[800px] h-[500px]" />
@@ -132,6 +103,36 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* Water Trucks promo section */}
+      <div className="px-[20px] lg:px-[100px] py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div>
+            <p className="roboto-slab font-bold text-[32px] lg:text-[42px]">Water Trucks</p>
+            <p className="mt-3 text-[#333] text-sm md:text-base lg:text-lg max-w-[600px]">
+              Heavy-duty off-road water trucks engineered for dust suppression, soil compaction, and site support.
+              Explore our Oshkosh 6x6 builds with cab‑controlled spray systems and high‑capacity tanks.
+            </p>
+            <div className="mt-6 flex gap-3">
+              <button
+                onClick={() => push("/water-truck")}
+                className="rounded-full text-white bg-[#5C9544] py-[10px] px-[28px] lg:py-[14px] lg:px-[50px]"
+              >
+                View Water Trucks
+              </button>
+            </div>
+          </div>
+          <div className="rounded-xl overflow-hidden border border-[#E5E5E5] bg-[#F6F6F6]">
+            <video
+              src="/waterTruckBanner1.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-[260px] lg:h-[360px] object-cover"
+            />
+          </div>
+        </div>
+      </div>
       <div className="hidden lg:block relative h-[700px]">
         <img
           src="/sec-4.png"
@@ -150,7 +151,7 @@ export default function Home() {
               See Current Inventory
             </button>
             <a
-              href="mailto:shamus@osheaequipment.com"
+              href="/contact-us"
               className="py-[14px] px-[50px] bg-transparent border border-black rounded-full capitalize inline-block text-center"
             >
               Contact Us
@@ -177,7 +178,7 @@ export default function Home() {
             >
               Request a quote
             </button>
-            <button className="py-[8px] px-[20px] text-sm bg-transparent border border-black rounded-full capitalize w-[150px]">
+            <button onClick={() => push("/contact-us")} className="py-[8px] px-[20px] text-sm bg-transparent border border-black rounded-full capitalize w-[150px]">
               contact us
             </button>
           </div>
