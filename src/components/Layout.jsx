@@ -20,7 +20,7 @@ export default ({ children }) => {
           <button
             onClick={() => push("/contact-us")}
             className={`py-[8px] px-[20px] text-sm lg:py-[14px] lg:px-[50px] ${
-              pathname !== "/" ? "bg-[#5C9544] text-white" : "bg-white"  
+              pathname !== "/" ? "bg-[#5C9544] text-white" : "bg-white"
             } rounded-full lg:text-xl capitalize`}
           >
             Request a quote
