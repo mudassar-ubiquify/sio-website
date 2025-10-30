@@ -27,9 +27,6 @@ export default function GalleryModal({ open, images = [], startIndex = 0, onClos
       <div className="relative w-full max-w-6xl" onClick={(e) => e.stopPropagation()}>
         <div className="relative w-full h-[60vh] sm:h-[70vh] bg-black rounded-lg overflow-hidden flex items-center justify-center">
           <img src={images[index]} alt="Preview" className="max-h-full max-w-full object-contain" />
-          {/* Watermark over preview */}
-          <img src="/logo.svg" alt="O'Shea watermark" className="pointer-events-none select-none absolute bottom-1/4 left-1/2 transform -translate-x-1/2 h-16 opacity-80 drop-shadow-lg" />
-
           {/* Controls */}
           {images.length > 1 && (
             <>

@@ -22,11 +22,6 @@ export default function WatermarkedImage({ src, alt = "", className = "", onClic
     return (
       <div className="relative group cursor-zoom-in" onClick={onClick}>
         <img src={src} alt={alt} className={className} />
-        <img
-          src="/logo.svg"
-          alt="O'Shea watermark"
-          className="pointer-events-none select-none absolute bottom-1/4 left-1/2 transform -translate-x-1/2 h-10 lg:h-12 opacity-70 drop-shadow-lg"
-        />
       </div>
     );
   }
@@ -35,12 +30,6 @@ export default function WatermarkedImage({ src, alt = "", className = "", onClic
     <>
       <div className="relative group cursor-zoom-in" onClick={open}>
         <img src={src} alt={alt} className={className} />
-        {/* Watermark (thumbnail) */}
-        <img
-          src="/logo.svg"
-          alt="O'Shea watermark"
-          className="pointer-events-none select-none absolute bottom-1/4 left-1/2 transform -translate-x-1/2 h-10 lg:h-12 opacity-70 drop-shadow-lg"
-        />
       </div>
 
       {isOpen && (
@@ -53,12 +42,6 @@ export default function WatermarkedImage({ src, alt = "", className = "", onClic
               src={src}
               alt={alt}
               className="w-auto h-auto max-w-[95vw] max-h-[95vh] object-contain rounded-md"
-            />
-            {/* Watermark (lightbox) */}
-            <img
-              src="/logo.svg"
-              alt="O'Shea watermark"
-              className="pointer-events-none select-none absolute bottom-1/4 left-1/2 transform -translate-x-1/2 h-16 opacity-80 drop-shadow-lg"
             />
             <button
               onClick={close}
