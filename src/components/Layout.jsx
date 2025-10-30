@@ -39,7 +39,7 @@ export default ({ children }) => {
           <div className="pr-28">
             <div className="mb-6 flex gap-5 items-center">
               <span onClick={() => push("/water-truck")} className="cursor-pointer capitalize hover:underline">Water truck</span>
-              <span onClick={() => push("/inventory")} className="cursor-pointer capitalize hover:underline">Inventory</span>
+              <span onClick={() => push("/current-inventory")} className="cursor-pointer capitalize hover:underline">Inventory</span>
             </div>
             <a href="https://maps.app.goo.gl/ahQMjFPMQakkjWot5?g_st=ac">
               <span className="font-semibold">Office Address:</span>
@@ -70,7 +70,7 @@ export default ({ children }) => {
         <div className="mt-8">
           <div className="flex gap-5 mb-6 items-center">
             <span onClick={() => push("/water-truck")} className="cursor-pointer capitalize hover:underline">Water truck</span>
-            <span onClick={() => push("/inventory")} className="cursor-pointer capitalize hover:underline">Inventory</span>
+            <span onClick={() => push("/current-inventory")} className="cursor-pointer capitalize hover:underline">Inventory</span>
           </div>
           <a href="https://maps.app.goo.gl/ahQMjFPMQakkjWot5?g_st=ac">
             <span className="font-semibold">Office Address:</span>
