@@ -67,37 +67,37 @@ export default () => {
   };
 
   return (
-    <div className="p-20">
-      <div className="w-full md:flex gap-10">
-        <div className="md:w-1/3">
-          <div className="font-bold text-[42px] mb-4">Stay Connected</div>
-          <div className="text-[16px]">
+    <div className="p-4 sm:p-8 md:p-12 lg:p-20">
+      <div className="w-full md:flex gap-6 lg:gap-10">
+        <div className="md:w-1/3 mb-8 md:mb-0">
+          <div className="font-bold text-[28px] sm:text-[32px] md:text-[36px] lg:text-[42px] mb-4">Stay Connected</div>
+          <div className="text-sm sm:text-base text-[16px]">
             Contact us for personalized customer service, maintenance, or to
             schedule repairs.
           </div>
-          <div className="mt-8 font-medium text-[#5C9544]">
-            O’Shea Equipment Company
+          <div className="mt-6 md:mt-8 font-medium text-[#5C9544]">
+            O'Shea Equipment Company
           </div>
-          <div className="mt-8">
+          <div className="mt-6 md:mt-8 text-sm sm:text-base">
             <a href="https://maps.app.goo.gl/ahQMjFPMQakkjWot5?g_st=ac">
               <span className="font-semibold">Address: </span>
               16915 Walden Rd. Suite 310
               <br />
               Montgomery, TX 77356
             </a>
-            <div>
+            <div className="mt-4">
               <span className="font-semibold">Email: </span>
               <a href="mailto:shamus@osheaequipment.com">
                 shamus@osheaequipment.com
               </a>
             </div>
-            <div>
+            <div className="mt-4">
               <span className="font-semibold">Phone: </span>
               <a href="tel:+18174221393">+1-817-422-1393</a>
             </div>
           </div>
         </div>
-        <div className="md:w-2/3 mt-20 md:mt-0">
+        <div className="md:w-2/3 md:mt-0">
           <div>
             <div className="font-medium">
               Topic<span className="text-[#FF0000]">*</span>
@@ -151,7 +151,7 @@ export default () => {
               <PhoneInput
                 value={form.phone}
                 onChange={(value) => valueSetter(value, "phone")}
-                placeholder="Enter your company name"
+                placeholder="Enter your phone number"
                 className={`w-full ${error?.phone && "phone-error"}`}
               />
             </div>
@@ -196,10 +196,10 @@ export default () => {
               />
             </div>
           </div>
-          <div>
+          <div className="mt-8 md:mt-16">
             <Button
               onClick={sendEmail}
-              className="no-hover float-right rounded-full text-xl capitalize text-white mt-16 bg-[#5C9544] py-[14px] px-[50px] h-[53px]"
+              className="no-hover w-full sm:w-auto sm:float-right rounded-full text-base sm:text-lg lg:text-xl capitalize text-white bg-[#5C9544] py-3 sm:py-[14px] px-8 sm:px-[50px] h-auto sm:h-[53px]"
               loading={isSubmitting}
             >
               Submit

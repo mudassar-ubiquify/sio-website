@@ -215,22 +215,22 @@ export default function WaterTruckPage() {
       </div>
 
       {/* CTA Section */}
-      <div className="px-[20px] lg:px-[100px] pb-24">
-        <div className="bg-[#5C9544] rounded-2xl p-8 lg:p-12 text-white flex flex-col lg:flex-row items-center justify-between gap-6">
-          <div>
-            <p className="roboto-slab font-bold text-[24px] lg:text-[36px]">Ready to add capability to your fleet?</p>
-            <p className="mt-2 opacity-90">Talk with our team about availability, pricing, and configurations.</p>
+      <div className="px-4 sm:px-[20px] lg:px-[100px] pb-12 sm:pb-16 lg:pb-24">
+        <div className="bg-[#5C9544] rounded-2xl p-6 sm:p-8 lg:p-12 text-white flex flex-col lg:flex-row items-center justify-between gap-6">
+          <div className="text-center lg:text-left">
+            <p className="roboto-slab font-bold text-[20px] sm:text-[24px] lg:text-[36px]">Ready to add capability to your fleet?</p>
+            <p className="mt-2 opacity-90 text-sm sm:text-base">Talk with our team about availability, pricing, and configurations.</p>
           </div>
-          <div className="flex gap-3">
+          <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
             <button
               onClick={() => push("/contact-us")}
-              className="rounded-full bg-white text-black py-[10px] px-[28px] lg:py-[14px] lg:px-[50px]"
+              className="rounded-full bg-white text-black py-[10px] px-[28px] lg:py-[14px] lg:px-[50px] text-sm sm:text-base w-full sm:w-auto"
             >
               Contact Us
             </button>
             <a
               href="tel:+18174221393"
-              className="rounded-full border border-white text-white py-[10px] px-[28px] lg:py-[14px] lg:px-[50px]"
+              className="rounded-full border border-white text-white py-[10px] px-[28px] lg:py-[14px] lg:px-[50px] text-sm sm:text-base text-center w-full sm:w-auto"
             >
               Call +1‑817‑422‑1393
             </a>

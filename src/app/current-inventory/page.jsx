@@ -12,12 +12,12 @@ export default function CurrentInventory() {
   const [modal, setModal] = useState(null);
 
   return (
-    <div className="px-[20px] lg:px-[100px] pt-[120px] pb-16">
+    <div className="px-4 sm:px-[20px] lg:px-[100px] pt-20 sm:pt-24 lg:pt-[120px] pb-12 sm:pb-16">
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <p className="roboto-slab font-bold text-[32px] lg:text-[42px]">Current Inventory</p>
-          <p className="text-sm lg:text-base text-[#444]">Latest equipment available. Contact us for pricing and shipping quotes.</p>
+          <p className="roboto-slab font-bold text-[24px] sm:text-[28px] md:text-[32px] lg:text-[42px]">Current Inventory</p>
+          <p className="text-xs sm:text-sm lg:text-base text-[#444] mt-1">Latest equipment available. Contact us for pricing and shipping quotes.</p>
         </div>
       </div>
 

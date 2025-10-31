@@ -1,10 +1,10 @@
 "use client";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 const SHADOW = { filter: "drop-shadow(0px 0px 10px white)" };
 
 export default ({ children }) => {
   const pathname = usePathname();
-  const { push } = useRouter();
   return (
     <div>
       <div
@@ -13,37 +13,44 @@ export default ({ children }) => {
         } z-10 nav-bar`}
       >
         <div>
-          <img onClick={() => push("/")} style={SHADOW} className="hidden cursor-pointer lg:block" src="/logo.svg" />
-          <img onClick={() => push("/")} style={SHADOW} className="lg:hidden cursor-pointer" src="/logo-mv.svg" />
+          <Link href="/" prefetch={true}>
+            <img style={SHADOW} className="hidden cursor-pointer lg:block" src="/logo.svg" alt="Logo" />
+          </Link>
+          <Link href="/" prefetch={true}>
+            <img style={SHADOW} className="lg:hidden cursor-pointer" src="/logo-mv.svg" alt="Logo" />
+          </Link>
         </div>
         <div>
-          <button
-            onClick={() => push("/contact-us")}
-            className={`py-[8px] px-[20px] text-sm lg:py-[14px] lg:px-[50px] ${
+          <Link
+            href="/contact-us"
+            prefetch={true}
+            className={`py-[8px] px-[20px] text-sm lg:py-[14px] lg:px-[50px] inline-block ${
               pathname !== "/" ? "bg-[#5C9544] text-white" : "bg-white"
             } rounded-full lg:text-xl capitalize`}
           >
             Request a quote
-          </button>
+          </Link>
         </div>
       </div>
       {children}
       <div className="hidden md:flex items-center gap-8 lg:gap-20 p-8 lg:p-24">
         <div className="w-full flex flex-col lg:flex-row justify-between items-center lg:items-start gap-8 lg:gap-0">
           <div>
-            <img className="cursor-pointer" onClick={() => push("/")} src="/logo-footer.png" />
+            <Link href="/" prefetch={true}>
+              <img className="cursor-pointer" src="/logo-footer.png" alt="Logo" />
+            </Link>
           </div>
           <div className="hidden xl:block">
             <img src="/footer-image.png" />
           </div>
           <div className="lg:pr-8 xl:pr-28 text-center lg:text-left">
             <div className="mb-6 flex gap-5 items-center justify-center lg:justify-start">
-              <button type="button" onClick={() => push("/water-truck")} className="capitalize hover:underline text-sm lg:text-base cursor-pointer">
+              <Link href="/water-truck" prefetch={true} className="capitalize hover:underline text-sm lg:text-base cursor-pointer">
                 Water truck
-              </button>
-              <button type="button" onClick={() => push("/current-inventory")} className="capitalize hover:underline text-sm lg:text-base cursor-pointer">
+              </Link>
+              <Link href="/current-inventory" prefetch={true} className="capitalize hover:underline text-sm lg:text-base cursor-pointer">
                 Inventory
-              </button>
+              </Link>
             </div>
             <a href="https://maps.app.goo.gl/ahQMjFPMQakkjWot5?g_st=ac" className="text-sm lg:text-base">
               <span className="font-semibold">Office Address:</span>
@@ -69,12 +76,14 @@ export default ({ children }) => {
       </div>
       <div className="md:hidden pb-12 mt-12 px-4 sm:px-5">
         <div className="flex justify-center sm:justify-start">
-          <img className="cursor-pointer max-w-[120px] sm:max-w-none" onClick={() => push("/")} src="/logo-footer.png"></img>
+          <Link href="/" prefetch={true}>
+            <img className="cursor-pointer max-w-[120px] sm:max-w-none" src="/logo-footer.png" alt="Logo" />
+          </Link>
         </div>
         <div className="mt-6 sm:mt-8">
           <div className="flex gap-4 sm:gap-5 mb-6 items-center justify-center sm:justify-start">
-            <button type="button" onClick={() => push("/water-truck")} className="capitalize hover:underline text-sm sm:text-base cursor-pointer">Water truck</button>
-            <button type="button" onClick={() => push("/current-inventory")} className="capitalize hover:underline text-sm sm:text-base cursor-pointer">Inventory</button>
+            <Link href="/water-truck" prefetch={true} className="capitalize hover:underline text-sm sm:text-base cursor-pointer">Water truck</Link>
+            <Link href="/current-inventory" prefetch={true} className="capitalize hover:underline text-sm sm:text-base cursor-pointer">Inventory</Link>
           </div>
           <a href="https://maps.app.goo.gl/ahQMjFPMQakkjWot5?g_st=ac" className="text-sm sm:text-base block">
             <span className="font-semibold">Office Address:</span>

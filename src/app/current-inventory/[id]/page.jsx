@@ -18,8 +18,8 @@ export default function InventoryDetail({ params }) {
 
   if (!item) {
     return (
-      <div className="px-[20px] lg:px-[100px] pt-[120px] pb-16">
-        <p className="roboto-slab font-bold text-[28px]">Listing not found</p>
+      <div className="px-4 sm:px-[20px] lg:px-[100px] pt-20 sm:pt-24 lg:pt-[120px] pb-12 sm:pb-16">
+        <p className="roboto-slab font-bold text-[24px] sm:text-[28px]">Listing not found</p>
       </div>
     );
   }
@@ -27,17 +27,17 @@ export default function InventoryDetail({ params }) {
   const [open, setOpen] = React.useState(false);
 
   return (
-    <div className="px-[20px] lg:px-[100px] pt-[120px] pb-16">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <div className="px-4 sm:px-[20px] lg:px-[100px] pt-20 sm:pt-24 lg:pt-[120px] pb-12 sm:pb-16">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
         <div>
           <div className="rounded-md overflow-hidden border border-[#E5E5E5] bg-white">
-            <ImageCarousel images={item.images} alt={item.title} heightClass="h-[420px]" roundedClass="rounded-md" />
+            <ImageCarousel images={item.images} alt={item.title} heightClass="h-[280px] sm:h-[350px] lg:h-[420px]" roundedClass="rounded-md" />
           </div>
         </div>
 
         <div>
           <p className="text-xs uppercase tracking-wide text-[#777]">{item.category}</p>
-          <p className="roboto-slab font-bold text-[26px] lg:text-[32px] mt-1">{item.title}</p>
+          <p className="roboto-slab font-bold text-[20px] sm:text-[24px] lg:text-[32px] mt-1">{item.title}</p>
           <div className="mt-4 text-sm">
             <div className="flex items-center justify-between">
               <span className="text-[#555]">Price</span>
@@ -65,11 +65,11 @@ export default function InventoryDetail({ params }) {
             )}
           </div>
 
-          <div className="mt-6 flex gap-3">
-            <button onClick={() => push("/contact-us")} className="rounded-full text-white bg-[#5C9544] py-[10px] px-[28px]">
+          <div className="mt-6 flex flex-col sm:flex-row gap-3">
+            <button onClick={() => push("/contact-us")} className="rounded-full text-white bg-[#5C9544] py-[10px] px-[28px] text-sm sm:text-base">
               Email Seller
             </button>
-            <button onClick={() => setOpen(true)} className="rounded-full border border-black py-[10px] px-[28px]">
+            <button onClick={() => setOpen(true)} className="rounded-full border border-black py-[10px] px-[28px] text-sm sm:text-base">
               {sellerPhoneText}
             </button>
           </div>
@@ -177,8 +177,8 @@ export default function InventoryDetail({ params }) {
         </div>
       </div>
 
-      <div className="mt-12">
-        <button onClick={() => push("/current-inventory")} className="underline">Back to inventory</button>
+      <div className="mt-8 sm:mt-12">
+        <button onClick={() => push("/current-inventory")} className="underline text-sm sm:text-base">Back to inventory</button>
       </div>
 
       <ConfirmCallModal
