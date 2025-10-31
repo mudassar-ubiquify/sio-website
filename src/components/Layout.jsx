@@ -28,34 +28,38 @@ export default ({ children }) => {
         </div>
       </div>
       {children}
-      <div className="hidden md:flex items-center gap-20 p-24">
-        <div className="w-full flex justify-between">
+      <div className="hidden md:flex items-center gap-8 lg:gap-20 p-8 lg:p-24">
+        <div className="w-full flex flex-col lg:flex-row justify-between items-center lg:items-start gap-8 lg:gap-0">
           <div>
             <img className="cursor-pointer" onClick={() => push("/")} src="/logo-footer.png" />
           </div>
-          <div className="hidden lg:block">
+          <div className="hidden xl:block">
             <img src="/footer-image.png" />
           </div>
-          <div className="pr-28">
-            <div className="mb-6 flex gap-5 items-center">
-              <span onClick={() => push("/water-truck")} className="cursor-pointer capitalize hover:underline">Water truck</span>
-              <span onClick={() => push("/current-inventory")} className="cursor-pointer capitalize hover:underline">Inventory</span>
+          <div className="lg:pr-8 xl:pr-28 text-center lg:text-left">
+            <div className="mb-6 flex gap-5 items-center justify-center lg:justify-start">
+              <button type="button" onClick={() => push("/water-truck")} className="capitalize hover:underline text-sm lg:text-base cursor-pointer">
+                Water truck
+              </button>
+              <button type="button" onClick={() => push("/current-inventory")} className="capitalize hover:underline text-sm lg:text-base cursor-pointer">
+                Inventory
+              </button>
             </div>
-            <a href="https://maps.app.goo.gl/ahQMjFPMQakkjWot5?g_st=ac">
+            <a href="https://maps.app.goo.gl/ahQMjFPMQakkjWot5?g_st=ac" className="text-sm lg:text-base">
               <span className="font-semibold">Office Address:</span>
               <br />
               16915 Walden Rd. Suite 310
               <br />
               Montgomery, TX 77356
             </a>
-            <div className="mt-5">
+            <div className="mt-5 text-sm lg:text-base">
               <span className="font-semibold">Email:</span>
               <br />
               <a href="mailto:shamus@osheaequipment.com">
                 shamus@osheaequipment.com
               </a>
             </div>
-            <div className="mt-5">
+            <div className="mt-5 text-sm lg:text-base">
               <span className="font-semibold">Phone:</span>
               <br />
               <a href="tel:+18174221393">+1-817-422-1393</a>
@@ -63,30 +67,30 @@ export default ({ children }) => {
           </div>
         </div>
       </div>
-      <div className="md:hidden pb-20 mt-20 px-5">
-        <div>
-          <img className="cursor-pointer" onClick={() => push("/")} src="/logo-footer.png"></img>
+      <div className="md:hidden pb-12 mt-12 px-4 sm:px-5">
+        <div className="flex justify-center sm:justify-start">
+          <img className="cursor-pointer max-w-[120px] sm:max-w-none" onClick={() => push("/")} src="/logo-footer.png"></img>
         </div>
-        <div className="mt-8">
-          <div className="flex gap-5 mb-6 items-center">
-            <span onClick={() => push("/water-truck")} className="cursor-pointer capitalize hover:underline">Water truck</span>
-            <span onClick={() => push("/current-inventory")} className="cursor-pointer capitalize hover:underline">Inventory</span>
+        <div className="mt-6 sm:mt-8">
+          <div className="flex gap-4 sm:gap-5 mb-6 items-center justify-center sm:justify-start">
+            <button type="button" onClick={() => push("/water-truck")} className="capitalize hover:underline text-sm sm:text-base cursor-pointer">Water truck</button>
+            <button type="button" onClick={() => push("/current-inventory")} className="capitalize hover:underline text-sm sm:text-base cursor-pointer">Inventory</button>
           </div>
-          <a href="https://maps.app.goo.gl/ahQMjFPMQakkjWot5?g_st=ac">
+          <a href="https://maps.app.goo.gl/ahQMjFPMQakkjWot5?g_st=ac" className="text-sm sm:text-base block">
             <span className="font-semibold">Office Address:</span>
             <br />
             16915 Walden Rd. Suite 310
             <br />
             Montgomery, TX 77356
           </a>
-          <div className="mt-5">
+          <div className="mt-4 sm:mt-5 text-sm sm:text-base">
             <span className="font-semibold">Email:</span>
             <br />
             <a href="mailto:shamus@osheaequipment.com">
               shamus@osheaequipment.com
             </a>
           </div>
-          <div className="mt-5">
+          <div className="mt-4 sm:mt-5 text-sm sm:text-base">
             <span className="font-semibold">Phone:</span>
             <br />
             <a href="tel:+18174221393">+1-817-422-1393</a>
