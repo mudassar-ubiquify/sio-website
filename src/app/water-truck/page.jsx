@@ -30,12 +30,6 @@ export default function WaterTruckPage() {
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
               <button
-                onClick={() => push("/contact-us")}
-                className="rounded-full text-white bg-[#5C9544] py-[10px] px-[28px] lg:py-[14px] lg:px-[50px]"
-              >
-                Request a quote
-              </button>
-              <button
                 onClick={() => {
                   const el = document.getElementById("specs-section");
                   if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });

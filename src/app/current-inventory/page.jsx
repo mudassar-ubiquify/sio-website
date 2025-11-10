@@ -19,17 +19,22 @@ function InventoryContent() {
     return listings.filter(item => item.category === categoryFilter);
   }, [categoryFilter]);
 
+  // Compute display heading (pluralize Amphibious Excavator -> Amphibious Excavators)
+  const displayHeading = useMemo(() => {
+    if (!categoryFilter) return "Current Inventory";
+    if (categoryFilter === "Amphibious Excavator") return "Amphibious Excavators";
+    return categoryFilter;
+  }, [categoryFilter]);
+
   return (
     <div className="px-4 sm:px-[20px] lg:px-[100px] pt-20 sm:pt-24 lg:pt-[120px] pb-12 sm:pb-16">
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <p className="roboto-slab font-bold text-[24px] sm:text-[28px] md:text-[32px] lg:text-[42px]">
-            {categoryFilter ? categoryFilter : "Current Inventory"}
-          </p>
+          <p className="roboto-slab font-bold text-[24px] sm:text-[28px] md:text-[32px] lg:text-[42px]">{displayHeading}</p>
           <p className="text-xs sm:text-sm lg:text-base text-[#444] mt-1">
-            {categoryFilter 
-              ? `Available ${categoryFilter.toLowerCase()} equipment. Contact us for pricing and shipping quotes.`
+            {categoryFilter
+              ? `Available ${displayHeading.toLowerCase()} equipment. Contact us for pricing and shipping quotes.`
               : "Latest equipment available. Contact us for pricing and shipping quotes."}
           </p>
         </div>

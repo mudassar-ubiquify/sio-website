@@ -39,12 +39,6 @@ export default function Home() {
           <p className="text-base sm:text-[18px] md:text-[32px] xl:text-[40px] mt-4 leading-10">
             Amphibious Excavators built for the most demanding job sites
           </p>
-          <button
-            onClick={() => push("/contact-us")}
-            className="py-[8px] px-[20px] text-sm lg:py-[14px] lg:px-[50px] lg:text-xl bg-transparent border border-white text-white mt-8 sm:mt-12 lg:mt-10 rounded-full capitalize"
-          >
-            Request a quote
-          </button>
         </div>
         <div className="absolute w-full bottom-20 lg:bottom-8 flex justify-center">
           <img className="animate-bounce" src="/arrow.svg" />

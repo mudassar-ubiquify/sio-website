@@ -30,7 +30,7 @@ export default ({ children }) => {
     <div>
       <div
         className={`w-full px-[20px] lg:px-[100px] py-[20px] flex justify-between items-center  ${
-          pathname === "/" ? "absolute" : "bg-[#D6D6D6]"
+          pathname === "/" ? "absolute" : "bg-white"
         } z-10 nav-bar`}
       >
         <div>
@@ -45,8 +45,8 @@ export default ({ children }) => {
           <Link
             href="/current-inventory"
             prefetch={true}
-            className={`py-[8px] px-[16px] text-sm lg:py-[14px] lg:px-[30px] rounded-full lg:text-lg capitalize whitespace-nowrap ${
-              pathname === "/" ? "bg-white" : "bg-[#5C9544] text-white"
+            className={`py-[8px] px-[16px] text-sm lg:py-[14px] lg:px-[30px] rounded-full lg:text-lg capitalize whitespace-nowrap bg-transparent ${
+              pathname === "/" ? "border border-white text-white" : "border border-black text-black"
             }`}
           >
             Current Inventory
@@ -54,8 +54,8 @@ export default ({ children }) => {
           <Link
             href="/water-truck"
             prefetch={true}
-            className={`py-[8px] px-[16px] text-sm lg:py-[14px] lg:px-[30px] rounded-full lg:text-lg capitalize whitespace-nowrap ${
-              pathname === "/" ? "bg-white" : "bg-[#5C9544] text-white"
+            className={`py-[8px] px-[16px] text-sm lg:py-[14px] lg:px-[30px] rounded-full lg:text-lg capitalize whitespace-nowrap bg-transparent ${
+              pathname === "/" ? "border border-white text-white" : "border border-black text-black"
             }`}
           >
             Water Trucks
@@ -63,8 +63,8 @@ export default ({ children }) => {
           <Link
             href="/current-inventory?category=Amphibious Excavator"
             prefetch={true}
-            className={`py-[8px] px-[16px] text-sm lg:py-[14px] lg:px-[30px] rounded-full lg:text-lg capitalize whitespace-nowrap ${
-              pathname === "/" ? "bg-white" : "bg-[#5C9544] text-white"
+            className={`py-[8px] px-[16px] text-sm lg:py-[14px] lg:px-[30px] rounded-full lg:text-lg capitalize whitespace-nowrap bg-transparent ${
+              pathname === "/" ? "border border-white text-white" : "border border-black text-black"
             }`}
           >
             Amphibious Excavators
@@ -94,9 +94,9 @@ export default ({ children }) => {
           <Link
             href="/contact-us"
             prefetch={true}
-            className={`hidden lg:inline-block py-[8px] px-[20px] text-sm lg:py-[14px] lg:px-[50px] ${
-              pathname !== "/" ? "bg-[#5C9544] text-white" : "bg-white"
-            } rounded-full lg:text-xl capitalize`}
+            className={`hidden lg:inline-block py-[8px] px-[20px] text-sm lg:py-[14px] lg:px-[50px] rounded-full lg:text-xl capitalize bg-transparent ${
+              pathname === "/" ? "border border-white text-white" : "border border-black text-black"
+            }`}
           >
             Request a quote
           </Link>
@@ -196,7 +196,7 @@ export default ({ children }) => {
                 Water truck
               </Link>
               <Link href="/current-inventory" prefetch={true} className="capitalize hover:underline text-sm lg:text-base cursor-pointer">
-                Inventory
+                Current Inventory
               </Link>
             </div>
             <a href="https://maps.app.goo.gl/ahQMjFPMQakkjWot5?g_st=ac" className="text-sm lg:text-base">
@@ -230,7 +230,7 @@ export default ({ children }) => {
         <div className="mt-6 sm:mt-8">
           <div className="flex gap-4 sm:gap-5 mb-6 items-center justify-center sm:justify-start">
             <Link href="/water-truck" prefetch={true} className="capitalize hover:underline text-sm sm:text-base cursor-pointer">Water truck</Link>
-            <Link href="/current-inventory" prefetch={true} className="capitalize hover:underline text-sm sm:text-base cursor-pointer">Inventory</Link>
+            <Link href="/current-inventory" prefetch={true} className="capitalize hover:underline text-sm sm:text-base cursor-pointer">Current Inventory</Link>
           </div>
           <a href="https://maps.app.goo.gl/ahQMjFPMQakkjWot5?g_st=ac" className="text-sm sm:text-base block">
             <span className="font-semibold">Office Address:</span>
