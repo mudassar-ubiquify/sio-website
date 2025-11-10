@@ -2,7 +2,7 @@ export const listings = [
   {
     id: "cat-307e2-2016",
     title: "2016 CATERPILLAR 307E2",
-    category: "Crawler Excavators",
+    category: "Amphibious Excavator",
     location: "Houston, Texas",
     hours: 737,
     monthly: "USD $30,000",
@@ -68,7 +68,7 @@ export const listings = [
   {
     id: "cat-312e-2014",
     title: "2014 CATERPILLAR 312E",
-    category: "Crawler Excavators",
+    category: "Amphibious Excavator",
     location: "Houston, Texas",
     hours: 1361,
     monthly: "USD $30,000",
@@ -128,7 +128,7 @@ export const listings = [
   {
     id: "cat-330-2022",
     title: "2022 CATERPILLAR 330",
-    category: "Crawler Excavators",
+    category: "Amphibious Excavator",
     location: "Houston, Texas",
     hours: 1043,
     monthly: "USD $50,000",
@@ -189,7 +189,7 @@ export const listings = [
   {
     id: "oshkosh-mk23-2008",
     title: "2008 OSHKOSH MK23",
-    category: "Truck Water Equipment",
+    category: "Water Truck",
     location: "Houston, Texas",
     hours: 5000,
     priceText: "CALL FOR PRICE",
@@ -240,7 +240,7 @@ export const listings = [
   {
     id: "oshkosh-mk23-2003",
     title: "2003 OSHKOSH MK23",
-    category: "Truck Water Equipment",
+    category: "Water Truck",
     location: "Bryan, Texas",
     hours: 5000,
     priceText: "CALL FOR PRICE",
@@ -287,7 +287,7 @@ export const listings = [
   {
     id: "oshkosh-mk23-2003b",
     title: "2003 OSHKOSH MK23",
-    category: "Truck Water Equipment",
+    category: "Water Truck",
     location: "Houston, Texas",
     hours: 1782,
     priceText: "CALL FOR PRICE",
@@ -342,7 +342,7 @@ export const listings = [
   {
     id: "oshkosh-mk23-2002",
     title: "2002 OSHKOSH MK23",
-    category: "Truck Water Equipment",
+    category: "Water Truck",
     location: "Houston, Texas",
     hours: 2896,
     priceText: "CALL FOR PRICE",
